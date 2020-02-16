@@ -36,7 +36,7 @@ app.post("/api/user/login", (req, res) => {
       if (err) {
         res.status(401).send("err naja");
       } else if (data.rows[0] == undefined) {
-        res.status(401).send("???");
+        res.status(401).send("araikormairu");
       } else {
         if (data.rows[0]["password"] != password) {
           res.status(401).send("rahuspid");
